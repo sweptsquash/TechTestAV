@@ -1,6 +1,7 @@
 <?php
 
-use Illuminate\Http\Request;
+use App\Http\Controllers\QuoteController;
+use App\Http\Controllers\QuoteRefreshController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,6 +15,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
+Route::middleware('auth:sanctum')->group(function () {
+    Route::prefix('quotes')->name('quotes.')->group(function () {
+        Route::get('', QuoteController::class)->name('index');
+        Route::get('refresh', QuoteRefreshController::class)->name('refresh');
+    });
 });

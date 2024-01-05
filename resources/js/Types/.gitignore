@@ -1,0 +1,5 @@
+*
+!.gitignore
+!app.d.ts
+!page.d.ts
+!vite-env.d.ts

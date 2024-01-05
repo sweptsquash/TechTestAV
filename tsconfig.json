@@ -1,0 +1,25 @@
+{
+    "compilerOptions": {
+        "target": "ESNext",
+        "allowJs": true,
+        "forceConsistentCasingInFileNames": true,
+        "module": "ESNext",
+        "moduleResolution": "Node10",
+        "strict": true,
+        "jsx": "preserve",
+        "sourceMap": true,
+        "resolveJsonModule": true,
+        "isolatedModules": true,
+        "esModuleInterop": true,
+        "allowSyntheticDefaultImports": true,
+        "lib": ["ESNext", "DOM"],
+        "skipLibCheck": true,
+        "types": ["vite/client", "node", "momentum-layout/macro", "@inertiajs/vue3"],
+        "baseUrl": ".",
+        "paths": {
+            "@/*": ["resources/js/*"],
+            "~/*": ["node_modules/*"]
+        }
+    },
+    "include": ["resources/js/**/*.ts", "resources/js/**/*.d.ts", "resources/js/**/*.vue"]
+}
